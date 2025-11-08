@@ -1,2 +1,8 @@
-// Re-export config from config directory
-export { default } from "./config/playwright.config";
+import { defineConfig } from "@playwright/test";
+import baseConfig from "./config/playwright.config";
+
+// Override testDir to be relative to root
+export default defineConfig({
+  ...baseConfig,
+  testDir: "./tests/e2e",
+});
