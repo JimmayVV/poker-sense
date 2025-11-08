@@ -1,0 +1,7 @@
+node_modules
+build
+.react-router
+dist
+coverage
+package-lock.json
+*.md

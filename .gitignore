@@ -1,0 +1,35 @@
+# Dependencies
+node_modules
+
+# Build outputs
+build
+.react-router
+dist
+dist-ssr
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+*.local
+
+# Testing
+coverage
+.nyc_output
+playwright-report
+test-results
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
