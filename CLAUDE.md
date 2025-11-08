@@ -6,9 +6,24 @@ Mobile-first Texas Hold'em training application with tournament-style gameplay. 
 
 ## Current Status
 
-**Phase:** 2 - Foundation (Complete)
-**Next Phase:** 3 - Game Engine Development
+**Phase:** 3 - Game Engine Development (87.5% Complete - 7/8 issues)
+**Next Phase:** 4 - AI Training
 **Next Milestone:** Dec 6, 2025
+
+**Phase 3 Progress:**
+- ✅ Issue #29: Game constants & enums (36 tests, 100% coverage)
+- ✅ Issue #28: Card & hand types (29 tests, 86% coverage)
+- ✅ Issue #25: Deck management (44 tests, 94% coverage)
+- ✅ Issue #30: Pot calculator (25 tests, 95% coverage)
+- ✅ Issue #23: Hand evaluator (12 tests, 91% coverage)
+- ✅ Issue #27: Action validator (30 tests, 99% coverage)
+- ✅ Issue #26: Betting logic (26 tests, 98% coverage)
+- ⏳ Issue #24: Tournament state machine (pending)
+
+**Current Stats:**
+- 208 tests passing
+- 98.21% game-engine coverage
+- All CI/CD checks passing
 
 Track progress: https://github.com/JimmayVV/poker-sense/issues
 
@@ -194,15 +209,18 @@ npm run build            # Production build
 
 ## Getting Started
 
-Development environment is ready. Phase 3 starts now.
+Development environment is ready. Phase 3 is 87.5% complete.
 
 **Next Steps:**
-1. Install Docker (required for Supabase)
-2. Install Playwright: `npx playwright install --with-deps chromium`
-3. Start development: `npm run dev`
-4. Begin Phase 3: Game Engine (Issues #22-30)
-   - 100% test coverage required
-   - TDD approach (tests first)
-   - Server-side only
+1. Complete Issue #24: Tournament State Machine (final Phase 3 component)
+2. Begin Phase 4: AI Training (Issues #31-39)
 
-**Current Priority:** Begin Phase 3 - Game Engine Development (Issue #22).
+**Recent Progress:**
+- ✅ 7/8 Phase 3 issues complete
+- ✅ 208 tests passing (98.21% game-engine coverage)
+- ✅ Core game engine components implemented:
+  - Constants, types, deck, pot calculator
+  - Hand evaluator, action validator, betting logic
+- ⏳ State machine pending (orchestrates all components)
+
+**Current Priority:** Complete Issue #24 - Tournament State Machine to finish Phase 3.
