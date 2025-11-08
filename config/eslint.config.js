@@ -36,7 +36,22 @@ export default [
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
-        { allowConstantExport: true },
+        {
+          allowConstantExport: true,
+          allowExportNames: [
+            "meta",
+            "links",
+            "headers",
+            "loader",
+            "action",
+            "ErrorBoundary",
+            "HydrateFallback",
+            "handle",
+            "shouldRevalidate",
+            "clientLoader",
+            "clientAction",
+          ],
+        },
       ],
       "@typescript-eslint/no-unused-vars": [
         "error",
