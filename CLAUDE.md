@@ -58,6 +58,30 @@ Close all phase issues with: `for i in {START..END}; do gh issue close $i -c "Ph
 
 Example: Phase 2 complete → close issues #11-21
 
+### Commit Strategy
+
+**Infrastructure Phases (1, 2, 7):** Logical groupings (3-5 commits)
+- Group related changes together
+- Each commit should be a cohesive unit of work
+- Example Phase 2: (1) React Router + TypeScript, (2) Code quality tools, (3) Testing setup, (4) CI + Supabase + Tailwind
+
+**Feature Phases (3, 4, 5, 6):** Per-issue commits
+- One commit per issue whenever practical
+- Maintains clear history for feature development
+- Easier to review, revert, and understand changes
+- Include issue numbers in commit messages
+
+**Commit Message Format:**
+```
+type: brief description (Issue #N)
+
+- Bullet points of key changes
+- Reference related issues
+- Keep under 72 chars per line
+```
+
+Types: `feat`, `fix`, `test`, `chore`, `docs`, `ci`, `refactor`
+
 ## Key Decisions (ADRs)
 
 **Tech Stack (Issue #2):**
