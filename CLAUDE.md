@@ -6,8 +6,9 @@ Mobile-first Texas Hold'em training application with tournament-style gameplay. 
 
 ## Current Status
 
-**Phase:** 1 - BMAD Framework Setup & Planning
-**Next Milestone:** Nov 15, 2025
+**Phase:** 2 - Foundation (Complete)
+**Next Phase:** 3 - Game Engine Development
+**Next Milestone:** Dec 6, 2025
 
 Track progress: https://github.com/JimmayVV/poker-sense/issues
 
@@ -32,7 +33,7 @@ poker-sense/
 ### Phase-Based Approach
 Work sequentially through phases. Each phase epic lists all issues. Mark complete before moving to next phase.
 
-**Current Phase Tasks:** See [Issue #1](https://github.com/JimmayVV/poker-sense/issues/1)
+**Current Phase Tasks:** See [Phase 3 Epic - Issue #22](https://github.com/JimmayVV/poker-sense/issues/22)
 
 ### Test-Driven Development
 1. Write tests first (Red)
@@ -51,6 +52,11 @@ Work sequentially through phases. Each phase epic lists all issues. Mark complet
 4. Implement with TDD
 5. Mark as done when all criteria met
 6. Move to next issue
+
+**When Phase Complete:**
+Close all phase issues with: `for i in {START..END}; do gh issue close $i -c "Phase N complete - [summary]"; done`
+
+Example: Phase 2 complete → close issues #11-21
 
 ## Key Decisions (ADRs)
 
@@ -109,10 +115,17 @@ ALL config files in `/config` directory. Root stays clean.
 
 ```bash
 # Development
-npm run dev              # Start dev server
+npm run dev              # Start Supabase + dev server
+npm run dev:app          # Dev server only (Supabase already running)
 npm run typecheck        # Check types
 npm run lint             # Lint code
 npm run format           # Format code
+
+# Database
+npm run db:start         # Start local Supabase
+npm run db:stop          # Stop local Supabase
+npm run db:reset         # Reset database
+npm run db:status        # Check status
 
 # Testing
 npm test                 # Run unit tests
@@ -125,8 +138,8 @@ npm run build            # Production build
 
 ## Phase Checklist
 
-- [ ] Phase 1: BMAD Framework (Issues #1-10) - Due Nov 15
-- [ ] Phase 2: Foundation (Issues #11-21) - Due Nov 22
+- [x] Phase 1: BMAD Framework (Issues #1-10) - Complete Nov 8
+- [x] Phase 2: Foundation (Issues #11-21) - Complete Nov 8
 - [ ] Phase 3: Game Engine (Issues #22-30) - Due Dec 6
 - [ ] Phase 4: AI Training (Issues #31-39) - Due Dec 20
 - [ ] Phase 5: UX (Issues #40-48) - Due Jan 3
@@ -150,17 +163,22 @@ npm run build            # Production build
 - Keep game logic server-side only
 - Maintain 100% coverage on game engine
 - Use existing GitHub issues for planning
-- Update phase checklist as phases complete
+- **When phase complete:** Close all phase issues using gh issue close, update phase checklist in CLAUDE.md
 - Follow mobile-first approach for all UI work
 - Config files go in `/config` directory
 - All architectural decisions documented as ADRs
 
 ## Getting Started
 
-1. Complete Phase 1 issues (#2-10) - architectural decisions
-2. Set up development environment (Phase 2, Issue #12)
-3. Begin game engine with TDD (Phase 3, Issue #23)
-4. Build incrementally, test everything
-5. Deploy to production (Phase 7)
+Development environment is ready. Phase 3 starts now.
 
-**Current Priority:** Complete Phase 1 ADRs to unblock Phase 2.
+**Next Steps:**
+1. Install Docker (required for Supabase)
+2. Install Playwright: `npx playwright install --with-deps chromium`
+3. Start development: `npm run dev`
+4. Begin Phase 3: Game Engine (Issues #22-30)
+   - 100% test coverage required
+   - TDD approach (tests first)
+   - Server-side only
+
+**Current Priority:** Begin Phase 3 - Game Engine Development (Issue #22).
